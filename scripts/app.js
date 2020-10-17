@@ -8,6 +8,10 @@ $.getJSON('./data/vocabulary.json', function(json) {
   let isStop = false;
   let vAudio;
 
+  $('#test').on('click', function(){
+    $('#audio-iframe').attr('src', 'http://t.moedict.tw/11169.ogg')
+  });
+
   $('#start-test').on('click', function(){
     const repeat = 3;
     let isEnd = false;
@@ -119,7 +123,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
     }
     playAudio(0);
   });
-  
+
   $('#end-test').on('click', function(){
     isStop = window.confirm('Kám beh thêng?\n敢欲停？');
     if (isStop) {
