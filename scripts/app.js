@@ -8,10 +8,6 @@ $.getJSON('./data/vocabulary.json', function(json) {
   let isStop = false;
   let vAudio;
 
-  $('#test').on('click', function(){
-    $('#audio-iframe').attr('src', '//t.moedict.tw/11169.ogg')
-  });
-
   $('#start-test').on('click', function(){
     const repeat = 3;
     let isEnd = false;
@@ -75,7 +71,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
           }, 1000); 
         }
         else {
-          vAudio = new Audio(`http://t.moedict.tw/${audioArray[currentAudioI]}.ogg`);
+          vAudio = new Audio(`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.ogg`);
           let playTimes = 0;
           if (!isStop) {
             if (currentAudioI === 0 && playTimes === 0) {
