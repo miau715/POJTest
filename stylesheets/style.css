@@ -124,22 +124,87 @@ h1 .han {
   display: block;
 }
 
-#start-test {
-  margin-top: 10px;
+#start-test, #end-test {
+  margin: 10px auto;
   background: #333;
   color: #fff;
-  padding: 10px 50px;
-  border-radius: 30px;
+  padding: 10px 10px 10px 30px;
+  border-radius: 50px;
   font-size: 1em;
   border: #111 1px solid;
+  display: flex;
+  position: relative;
 }
 
-#start-test span {
+#start-test.hide, #end-test {
+  display: none;
+}
+
+#end-test.show {
+  display: flex;
+}
+
+#start-test:focus, #end-test:focus {
+  outline: none;
+}
+
+#start-test:focus::before, #end-test:focus::before {
+  content: " ";
+  position: absolute;
+  z-index: -1;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: rgba(0, 96, 255, .6) 5px solid ;
+  border-radius: 50px;
+}
+
+#end-test:focus::before {
+  border-color: rgba(205, 0, 0, .6);
+}
+
+#end-test {
+  background: #880000;
+  border-color: #550000;
+}
+
+#start-test span, #end-test span {
   display: block;
 }
 
-#start-test .han {
+#start-test .han, #end-test .han {
   color: #aaa;
+}
+
+#start-test .icon, #end-test .icon {
+  background: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: #333;
+  margin-left: 20px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#end-test .icon {
+  color: #880000;
+}
+
+#start-test .icon span, #end-test .icon span {
+  position: relative;
+}
+
+#start-test .icon span {
+  left: 1px;
+}
+
+#end-test .icon span {
+  font-size: 28px;
+  top: -3px;
 }
 
 #vocabulary-list {
