@@ -1,4 +1,4 @@
-$.getJSON("./data/vocabulary.json", function(json) {
+$.getJSON('./data/vocabulary.json', function(json) {
   const vObj = json;
   const vList = $('#vocabulary-list');
   const vLength = vObj.vocabulary.length;
@@ -39,7 +39,7 @@ $.getJSON("./data/vocabulary.json", function(json) {
     vList.append(`<li><div class="result-wrapper"><div class="result"><span class="han">${getVocabulary}</span></div><div class="link"><a href="https://www.moedict.tw/'${getVocabulary}" target="_blank"><span class="poj">Khòaⁿ jī-tián</span><span class="tl">Khuànn jī-tián</span><span class="han">看字典</span></a></div></div></li>`);
     $.ajax({
       url: `https://www.moedict.tw/t/${getVocabulary}.json`,
-      dataType: "json",
+      dataType: 'json',
       success: function(result) {
         let thisVObj = result;
         let thisVTTL = result.h[0].T;
@@ -59,12 +59,14 @@ $.getJSON("./data/vocabulary.json", function(json) {
           thisVAudio = (100000 + Number(thisVAudio)).toString().replace(/^1/, '');
         }
         audioArray[i] = thisVAudio;
-        vList.find('li').eq(i).find(".result").prepend(`<span class="poj">${thisVTPOJ}</span><span class="tl">${thisVTTL}</span>`);
+        vList.find('li').eq(i).find('.result').prepend(`<span class="poj">${thisVTPOJ}</span><span class="tl">${thisVTTL}</span>`);
       }
     });
   });
-  $("#start-test").on('click', function(){
+  $('#start-test').on('click', function(){
+    $('#vocabulary-list').removeClass('show');
     const repeat = 3;
+    let isEnd = false;
     let playAudio = function(currentAudioI) {
       let vAudio = new Audio(`http://t.moedict.tw/${audioArray[currentAudioI]}.ogg`);
       let playTimes = 0;
@@ -92,6 +94,16 @@ $.getJSON("./data/vocabulary.json", function(json) {
           if (currentAudioI < audioArray.length - 1) {
             currentAudioI++;
             playAudio(currentAudioI);
+          }
+        }
+        if (currentAudioI === (vNumber - 1) && playTimes === repeat) {
+          if (isEnd) {
+            setTimeout(function(){
+              $('#vocabulary-list').addClass('show');
+            }, 3000);
+          }
+          else {
+            isEnd = true;
           }
         }
       }, false);
