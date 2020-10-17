@@ -10,7 +10,8 @@ body {
 }
 
 .container {
-  width: 960px;
+  width: 90%;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -208,7 +209,8 @@ h1 .han {
 }
 
 #vocabulary-list {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   margin: 20px auto;
   text-align: left;
   visibility: hidden;
@@ -248,4 +250,60 @@ h1 .han {
   line-height: 1.3;
   text-decoration: none;
   color: #333;
+}
+
+@media (max-width: 640px) {
+  .lang-switch__wrapper {
+    flex-direction: column;
+    width: 300px;
+    text-align: left;
+  }
+  .lang-switch__option {
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 30px;
+  }
+
+  .lang-switch__option label {
+    padding: 0;
+    width: 300px;
+    border: none;
+    opacity: 1;
+  }
+
+  .lang-switch__option label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    border: #333 1px solid;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .lang-switch__wrapper input:checked ~ label {
+    color: inherit;
+    background: transparent;
+    opacity: 1;
+  }
+
+  .lang-switch__wrapper input:checked ~ label .han {
+    color: #777;
+  }
+
+  .lang-switch__wrapper input:checked ~ label::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    margin-top: -7px;
+    background: #333;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  }
 }
