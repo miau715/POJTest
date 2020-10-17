@@ -89,17 +89,15 @@ $.getJSON('./data/vocabulary.json', function(json) {
           vAudio.addEventListener('ended', function() {
             vAudio.currentTime = 0;
             if (!isStop) {
-              if (playTimes <= repeat - 1) {
+              if (playTimes < repeat) {
                 setTimeout(function(){
                   vAudio.play();
                   playTimes++;
                 }, 3000);
               }
-              else {
-                if (currentAudioI < audioArray.length - 1) {
-                  currentAudioI++;
-                  playAudio(currentAudioI);
-                }
+              else if (currentAudioI < vNumber - 1) {
+                currentAudioI++;
+                playAudio(currentAudioI);
               }
               if (currentAudioI === (vNumber - 1) && playTimes === repeat) {
                 if (isEnd) {
