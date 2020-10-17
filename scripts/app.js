@@ -103,6 +103,8 @@ $.getJSON('./data/vocabulary.json', function(json) {
                 if (isEnd) {
                   setTimeout(function(){
                     $('#vocabulary-list').addClass('show');
+                    $('#start-test').removeClass('hide');
+                    $('#end-test').removeClass('show');
                   }, 3000);
                 }
                 else {
