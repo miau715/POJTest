@@ -9,7 +9,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
   let vAudio;
 
   $('#test').on('click', function(){
-    $('#audio-iframe').attr('src', 'http://t.moedict.tw/11169.ogg')
+    $('#audio-iframe').attr('src', '//t.moedict.tw/11169.ogg')
   });
 
   $('#start-test').on('click', function(){
