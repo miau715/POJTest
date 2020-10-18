@@ -40,7 +40,7 @@ a {
 
 h1 {
   font-size: 1.6em;
-  margin: 10px 0;
+  margin: 10px 40px;
 }
 
 h1 span {
@@ -374,5 +374,21 @@ body.info-modal__show .info-modal {
   body.info-modal__show .info-modal {
     width: 90%;
     margin-left: -45%;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 96%;
+  }
+  h1 {
+    font-size: 1.3em;
+    margin: 10px 35px;
+  }
+
+  #more-info {
+    top: 14px;  
+    font-size: 1.4em;
+    padding: 0;
   }
 }
