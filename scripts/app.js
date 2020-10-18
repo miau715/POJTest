@@ -42,7 +42,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
         success: function(result) {
           let thisVObj = result;
           let thisVTTL = result.h[0].T;
-          let thisVTPOJ = thisVTTL.replace(/(o)([^.!?,\w\s\u2011]*)o/ig, '$1$2\u0358')
+          let thisVTPOJOrigin = thisVTTL.replace(/(o)([^.!?,\w\s\u2011]*)o/ig, '$1$2\u0358')
                           .replace(/ts/g, 'ch')
                           .replace(/Ts/g, 'Ch')
                           .replace(/u([^‑-\w\s]*)a/g, 'o$1a')
@@ -53,6 +53,44 @@ $.getJSON('./data/vocabulary.json', function(json) {
                           .replace(/nnh($|[‑-\s])/g, 'hⁿ$1')
                           .replace(/([ie])r/g, '$1\u0358')
                           .replace(/\u030B/g, "\u0306"); // 9th tone
+          function tonePoj(poj){
+            const toneReg = /([\u0300-\u0302\u0304\u0306\u0307\u030d])/;
+            (toneReg).test(poj);
+            let tone = RegExp.$1;
+            if ((toneReg).test(poj)) {
+              poj = ''.replace.call(poj, toneReg, '');
+              if (/oa[in]/i.exec(poj)) {
+                return poj.replace(/(oa)([in])/i, "$1" + tone + "$2");
+              }
+              if (/o/i.exec(poj)) {
+                return poj.replace(/(o)/i, "$1" + tone);
+              }
+              if (/e/i.exec(poj)) {
+                return poj.replace(/(e)/i, "$1" + tone);
+              }
+              if (/a/i.exec(poj)) {
+                return poj.replace(/(a)/i, "$1" + tone);
+              }
+              if (/u/i.exec(poj)) {
+                return poj.replace(/(u)/i, "$1" + tone);
+              }
+              if (/i/i.exec(poj)) {
+                return poj.replace(/(i)/i, "$1" + tone);
+              }
+              if (/ng/i.exec(poj)) {
+                return poj.replace(/(n)(g)/i, "$1" + tone + "$2");
+              }
+              if (/m/i.exec(poj)) {
+                return poj.replace(/(m)/i, "$1" + tone);
+              }
+              return poj + "" + tone; //impossible
+            }
+            return poj;
+          }
+          let thisVTPOJ = '';
+          thisVTPOJOrigin.split(/([- \u2011\.,!?])/).forEach(function(seg){
+            thisVTPOJ += tonePoj(seg);
+          });
           let thisVAudio = thisVObj.h[0]._;
           if (Number(thisVAudio) < 20000 || Number(thisVAudio) > 50000) {
             thisVAudio = (100000 + Number(thisVAudio)).toString().replace(/^1/, '');
