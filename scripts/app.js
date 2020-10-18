@@ -141,4 +141,22 @@ $.getJSON('./data/vocabulary.json', function(json) {
       $('.tl').removeClass('show');
     }
   });
+
+  $('#more-info').on('click', function(){
+    $('body').addClass('info-modal__show');
+  });
+
+  $('.info-modal__close').on('click', function(){
+    $('body').removeClass('info-modal__show');
+  });
+
+  $('body').on('click', function(e){
+    if ($(this).hasClass('info-modal__show')) {
+      if ($(e.target).parents('.info-modal').length === 0 
+          && !$(e.target).hasClass('info-modal')
+          && $(e.target).parents('#more-info').length === 0 ) {
+        $('body').removeClass('info-modal__show');
+      } 
+    }
+  });
 });

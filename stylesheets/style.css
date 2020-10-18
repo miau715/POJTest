@@ -9,6 +9,10 @@ body {
   color: #333;
 }
 
+a {
+  color: #0765bd;
+}
+
 .container {
   width: 90%;
   max-width: 960px;
@@ -57,13 +61,6 @@ h1 .han {
 
 .tl.show {
   display: block !important;
-}
-
-.more-info {
-  position: absolute;
-  right: 0;
-  top: 30px;
-  display: none;
 }
 
 .info {
@@ -252,6 +249,73 @@ h1 .han {
   color: #333;
 }
 
+#more-info {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  background: transparent;
+  border: none;
+  font-size: 1.6em;
+}
+
+body.info-modal__show::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+  z-index: 20;
+}
+
+.info-modal {
+  display: none;
+  text-align: left;
+}
+
+.info-modal p {
+  margin: 0 0 10px 0;
+}
+
+.info-modal__close {
+  position: absolute;
+  top: -36px;
+  right: 0;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  width: 36px;
+  height: 36px;
+  display: block;
+  font-size: 30px;
+}
+
+body.info-modal__show .info-modal {
+  display: block;
+  position: fixed;
+  width: 600px;
+  top: 15vh;
+  left: 50%;
+  margin-left: -300px;
+  z-index: 25;
+}
+
+.info-modal__content {
+  background: #fff;
+  padding: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+@media (max-width: 767px) {
+  body.info-modal__show .info-modal {
+    width: 80%;
+    margin-left: -40%;
+  }
+}
+
 @media (max-width: 640px) {
   .lang-switch__wrapper {
     flex-direction: column;
@@ -305,5 +369,10 @@ h1 .han {
     border-radius: 50%;
     width: 16px;
     height: 16px;
+  }
+
+  body.info-modal__show .info-modal {
+    width: 90%;
+    margin-left: -45%;
   }
 }
