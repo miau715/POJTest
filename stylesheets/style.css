@@ -182,7 +182,6 @@ h1 .han {
   height: 40px;
   color: #333;
   margin-left: 20px;
-  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -192,17 +191,10 @@ h1 .han {
   color: #880000;
 }
 
-#start-test .icon span, #end-test .icon span {
-  position: relative;
-}
-
-#start-test .icon span {
-  left: 1px;
-}
-
-#end-test .icon span {
-  font-size: 28px;
-  top: -3px;
+#start-test img, #end-test .icon img {
+  display: block;
+  width: 24px;
+  height: 24px;
 }
 
 #vocabulary-list {
