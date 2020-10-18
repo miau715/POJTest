@@ -164,6 +164,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
     isStop = window.confirm('Kám beh thêng?\n敢欲停？');
     if (isStop) {
       vAudio.stop();
+      vAudio.unload();
       $(vAudio).attr('src', '');
       $('#vocabulary-list').addClass('show');
       $('#start-test').removeClass('hide');
