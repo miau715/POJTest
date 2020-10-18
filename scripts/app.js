@@ -71,7 +71,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
           }, 1000); 
         }
         else {
-          vAudio = new Audio(`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.mp3`);
+          vAudio = new Audio(`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.ogg`);
           let playTimes = 0;
           if (!isStop) {
             if (currentAudioI === 0 && playTimes === 0) {
