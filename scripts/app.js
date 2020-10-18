@@ -109,7 +109,10 @@ $.getJSON('./data/vocabulary.json', function(json) {
           }, 1000); 
         }
         else {
-          vAudio = new Audio(`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.ogg`);
+          vAudio = new Howl({
+            src: [`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.ogg`, `https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.mp3`],
+            html5: true
+          });
           let playTimes = 0;
           if (!isStop) {
             if (currentAudioI === 0 && playTimes === 0) {
@@ -124,8 +127,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
             }
           }
     
-          vAudio.addEventListener('ended', function() {
-            vAudio.currentTime = 0;
+          vAudio.on('end', function(){
             if (!isStop) {
               if (playTimes < repeat) {
                 setTimeout(function(){
@@ -161,7 +163,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
   $('#end-test').on('click', function(){
     isStop = window.confirm('Kám beh thêng?\n敢欲停？');
     if (isStop) {
-      vAudio.pause();
+      vAudio.stop();
       $(vAudio).attr('src', '');
       $('#vocabulary-list').addClass('show');
       $('#start-test').removeClass('hide');
