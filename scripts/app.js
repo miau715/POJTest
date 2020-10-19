@@ -88,7 +88,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
             return poj;
           }
           let thisVTPOJ = '';
-          thisVTPOJOrigin.split(/([- \u2011\.,!?])/).forEach(function(seg){
+          thisVTPOJOrigin.split(/([- \u2011\.,!?\/])/).forEach(function(seg){
             thisVTPOJ += tonePoj(seg);
           });
           let thisVAudio = thisVObj.h[0]._;
@@ -96,6 +96,8 @@ $.getJSON('./data/vocabulary.json', function(json) {
             thisVAudio = (100000 + Number(thisVAudio)).toString().replace(/^1/, '');
           }
           audioArray[i] = thisVAudio;
+          thisVTPOJ = thisVTPOJ.replace('/', '<span class="or">又</span>')
+          thisVTTL = thisVTTL.replace('/', '<span class="or">又</span>')
           vList.find('li').eq(i).find('.result').prepend(`<span class="poj">${thisVTPOJ}</span><span class="tl">${thisVTTL}</span>`);
         }
       });

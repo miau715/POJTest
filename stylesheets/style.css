@@ -242,6 +242,18 @@ h1 .han {
   color: #333;
 }
 
+#vocabulary-list .or {
+  font-size: 11px;
+  display: inline-flex;
+  background: #ddd;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
 #more-info {
   position: absolute;
   right: 0;
