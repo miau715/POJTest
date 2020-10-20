@@ -189,7 +189,7 @@
       "from": "700"
     },
     {
-      "v": "花眉",
+      "v": "癩𰣻",
       "from": "700"
     },
     {
@@ -947,6 +947,98 @@
     {
       "v": "鬱卒",
       "from": "700"
+    },
+    {
+      "v": "掃帚",
+      "from": "textbook"
+    },
+    {
+      "v": "電火",
+      "from": "textbook"
+    },
+    {
+      "v": "碗盤",
+      "from": "textbook"
+    },
+    {
+      "v": "冊櫥",
+      "from": "textbook"
+    },
+    {
+      "v": "日光燈",
+      "from": "textbook"
+    },
+    {
+      "v": "膨椅",
+      "from": "textbook"
+    },
+    {
+      "v": "棉被",
+      "from": "textbook"
+    },
+    {
+      "v": "電視",
+      "from": "textbook"
+    },
+    {
+      "v": "收音機",
+      "from": "textbook"
+    },
+    {
+      "v": "茶鈷",
+      "from": "textbook"
+    },
+    {
+      "v": "洗衫",
+      "from": "textbook"
+    },
+    {
+      "v": "電腦",
+      "from": "textbook"
+    },
+    {
+      "v": "桌布",
+      "from": "textbook"
+    },
+    {
+      "v": "眠床",
+      "from": "textbook"
+    },
+    {
+      "v": "電話",
+      "from": "textbook"
+    },
+    {
+      "v": "冷氣",
+      "from": "textbook"
+    },
+    {
+      "v": "溫罐",
+      "from": "textbook"
+    },
+    {
+      "v": "畚斗",
+      "from": "textbook"
+    },
+    {
+      "v": "冰箱",
+      "from": "textbook"
+    },
+    {
+      "v": "燒水",
+      "from": "textbook"
+    },
+    {
+      "v": "湯匙仔",
+      "from": "textbook"
+    },
+    {
+      "v": "面巾",
+      "from": "textbook"
+    },
+    {
+      "v": "花矸",
+      "from": "textbook"
     }
   ]
 }
