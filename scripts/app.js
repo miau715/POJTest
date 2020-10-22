@@ -42,17 +42,24 @@ $.getJSON('./data/vocabulary.json', function(json) {
         success: function(result) {
           let thisVObj = result;
           let thisVTTL = result.h[0].T;
-          let thisVTPOJOrigin = thisVTTL.replace(/(o)([^.!?,\w\s\u2011]*)o/ig, '$1$2\u0358')
-                          .replace(/ts/g, 'ch')
-                          .replace(/Ts/g, 'Ch')
-                          .replace(/u([^‑-\w\s]*)a/g, 'o$1a')
-                          .replace(/u([^‑-\w\s]*)e/g, 'o$1e')
-                          .replace(/i([^‑-\w\s]*)k($|[-\s])/g, 'e$1k$2')
-                          .replace(/i([^‑-\w\s]*)ng/g, 'e$1ng')
-                          .replace(/nn($|[‑-\s])/g, 'ⁿ$1')
-                          .replace(/nnh($|[‑-\s])/g, 'hⁿ$1')
-                          .replace(/([ie])r/g, '$1\u0358')
-                          .replace(/\u030B/g, "\u0306"); // 9th tone
+          let thisVTTLProns = thisVTTL.split('/');
+          let thisVTPOJOrigin = '';
+          thisVTTLProns.forEach(function(pron, i){
+            if (i > 0) {
+              thisVTPOJOrigin += '/';
+            }
+            thisVTPOJOrigin += pron.replace(/(o)([^.!?,\w\s\u2011]*)o/ig, '$1$2\u0358')
+            .replace(/ts/g, 'ch')
+            .replace(/Ts/g, 'Ch')
+            .replace(/u([^‑-\w\s]*)a/g, 'o$1a')
+            .replace(/u([^‑-\w\s]*)e/g, 'o$1e')
+            .replace(/i([^‑-\w\s]*)k($|[-\s])/g, 'e$1k$2')
+            .replace(/i([^‑-\w\s]*)ng/g, 'e$1ng')
+            .replace(/nn($|[‑-\s])/g, 'ⁿ$1')
+            .replace(/nnh($|[‑-\s])/g, 'hⁿ$1')
+            .replace(/([ie])r/g, '$1\u0358')
+            .replace(/\u030B/g, "\u0306"); // 9th tone
+          });
           function tonePoj(poj){
             const toneReg = /([\u0300-\u0302\u0304\u0306\u0307\u030d])/;
             (toneReg).test(poj);
