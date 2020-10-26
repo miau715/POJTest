@@ -1343,6 +1343,94 @@
     {
       "v": "灶跤",
       "from": "textbook"
+    },
+    {
+      "v": "行路",
+      "from": "textbook"
+    },
+    {
+      "v": "火車",
+      "from": "textbook"
+    },
+    {
+      "v": "飛行機",
+      "from": "textbook"
+    },
+    {
+      "v": "計程車",
+      "from": "textbook"
+    },
+    {
+      "v": "頭等艙",
+      "from": "textbook"
+    },
+    {
+      "v": "鐵路",
+      "from": "textbook"
+    },
+    {
+      "v": "三輪車",
+      "from": "textbook"
+    },
+    {
+      "v": "慢車",
+      "from": "textbook"
+    },
+    {
+      "v": "公路",
+      "from": "textbook"
+    },
+    {
+      "v": "鐵馬",
+      "from": "textbook"
+    },
+    {
+      "v": "停車",
+      "from": "textbook"
+    },
+    {
+      "v": "港口",
+      "from": "textbook"
+    },
+    {
+      "v": "車牌",
+      "from": "textbook"
+    },
+    {
+      "v": "輪框",
+      "from": "textbook"
+    },
+    {
+      "v": "收費",
+      "from": "textbook"
+    },
+    {
+      "v": "青紅燈",
+      "from": "textbook"
+    },
+    {
+      "v": "加油站",
+      "from": "textbook"
+    },
+    {
+      "v": "斑馬線",
+      "from": "textbook"
+    },
+    {
+      "v": "天橋",
+      "from": "textbook"
+    },
+    {
+      "v": "地下道",
+      "from": "textbook"
+    },
+    {
+      "v": "鐵枝路",
+      "from": "textbook"
+    },
+    {
+      "v": "特別",
+      "from": "me"
     }
   ]
 }
