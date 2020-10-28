@@ -1517,7 +1517,75 @@
       "from": "textbook"
     },
     {
+      "v": "銀行",
+      "from": "textbook"
+    },
+    {
+      "v": "環保",
+      "from": "textbook"
+    },
+    {
+      "v": "總統",
+      "from": "textbook"
+    },
+    {
+      "v": "派出所",
+      "from": "textbook"
+    },
+    {
+      "v": "立法院",
+      "from": "textbook"
+    },
+    {
+      "v": "病院",
+      "from": "textbook"
+    },
+    {
+      "v": "學校",
+      "from": "textbook"
+    },
+    {
+      "v": "戲園",
+      "from": "textbook"
+    },
+    {
+      "v": "機場",
+      "from": "textbook"
+    },
+    {
+      "v": "菜市仔",
+      "from": "textbook"
+    },
+    {
+      "v": "飯店",
+      "from": "textbook"
+    },
+    {
+      "v": "剃頭店",
+      "from": "textbook"
+    },
+    {
+      "v": "法院",
+      "from": "textbook"
+    },
+    {
+      "v": "動物",
+      "from": "textbook"
+    },
+    {
+      "v": "監獄",
+      "from": "textbook"
+    },
+    {
+      "v": "警察局",
+      "from": "textbook"
+    },
+    {
       "v": "特別",
+      "from": "me"
+    },
+    {
+      "v": "差不多",
       "from": "me"
     }
   ]
