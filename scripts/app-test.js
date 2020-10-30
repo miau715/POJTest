@@ -1,4 +1,4 @@
-$.getJSON('./data/vocabulary.json', function(json) {
+$.getJSON('./data/vocabulary-test.json', function(json) {
   const vObj = json;
   const vList = $('#vocabulary-list');
   const vLength = vObj.vocabulary.length;

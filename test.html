@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166352182-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-166352182-2');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tâi-gí thiaⁿ-siá liān-si̍p 台語聽寫練習</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="stylesheets/normalize.css" />
+  <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="page-header">
+      <h1>
+        <span class="poj">Tâi-gí thiaⁿ-siá liān-si̍p</span>
+        <span class="tl">Tâi-gí thiann-siá liān-si̍p</span>
+        <span class="han">台語聽寫練習</span>
+      </h1>
+      <button id="more-info">
+        <span class="icon">ⓘ</span>
+        <span class="sr-only">Siông-sè soeh-bêng</span>
+        <span class="sr-only">詳細說明</span>
+      </button>
+    </header>
+    <div class="info">
+      <p class="poj">
+        Che sī chi̍t-ê iōng-lâi liān-si̍p Tâi-gí thiaⁿ-siá ê kang-kū. Ji̍h "Khai-sí" í-āu tō ē khai-sí liām 5 ê Tâi-gí sû. Múi chi̍t-ê sû ē liām 3 pái. Choân-pō͘ liām liáu ē hián-sī tap-àn.
+      </p>
+      <p class="tl">
+        Tse sī tsi̍t-ê iōng-lâi liān-si̍p Tâi-gí thiann-siá ê kang-kū. Ji̍h "khai-sí" í-āu tō ē khai-sí liām 5 ê Tâi-gí sû. Muí tsi̍t-ê sû ē liām 3 pái. Tsuân-pōo liām liáu ē hián-sī tap-àn.
+      </p>
+      <p class="han">
+        這是一个用來練習台語聽寫ê工具。揤「開始」以後就會開始唸 5 个台語詞。每一个詞會唸 3 擺。全部唸了會顯示答案。
+      </p>
+    </div>
+    <div class="lang-switch">
+      <div class="lang-switch__intro">
+        <span class="poj">Góa siūⁿ beh khòaⁿ:</span>
+        <span class="tl">Guá siūnn beh khuànn:</span>
+        <span class="han">我想欲看：</span>
+      </div>
+      <div class="lang-switch__wrapper">
+        <div class="lang-switch__option">
+          <input type="radio" name="use-poj" id="use-poj" checked />
+          <label for="use-poj">
+            <span>POJ Tâi-gí Pe̍h-ōe-jī</span>
+            <span class="han">POJ 台語白話字</span>
+          </label>
+        </div>
+        <div class="lang-switch__option">
+          <input type="radio" name="use-poj" id="use-tl" />
+          <label for="use-tl">
+            <span>TL Tâi-lô phing-im (Kàu-io̍k-pōo)</span>
+            <span class="han">TL 台羅拼音（教育部）</span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <span class="poj">Chù-ì ài seng tiâu-chéng im-liōng--o͘h!</span>
+      <span class="tl">Tsù-ì ài sing tiâu-tsíng im-liōng--ooh</span>
+      <span class="han">注意愛先調整音量喔！</span>
+    </div>
+    <button id="start-test">
+      <div class="text">
+        <span>Khai-sí</span>
+        <span class="han">開始</span>
+      </div>
+      <div class="icon">
+        <img src="images/icon--play.svg" alt="Play" />
+      </div>
+    </button>
+    <button id="end-test">
+      <div class="text">
+        <span>Mài koh liām--ah</span>
+        <span class="han">莫閣唸矣</span>
+      </div>
+      <div class="icon">
+        <img src="images/icon--stop.svg" alt="Stop" />
+      </div>
+    </button>
+    <ol id="vocabulary-list">
+    </ol>
+  </div>
+  <div class="info-modal">
+    <button class="info-modal__close">×</button>
+    <div class="info-modal__content">
+      <p class="poj">Che sī chi̍t-ê góa ūi-tio̍h chún-pī <a href="http://ctlt.twl.ncku.edu.tw/poj/index.html" target="_blank">Tâi-gí Pe̍h-ōe-jī Kiám-tēng</a> ê thiaⁿ-siá pō͘-hūn chò ê liān-si̍p kang-kū. Chu-liāu lóng sī tùi <a href="https://www.moedict.tw/'%E7%99%BC%E7%A9%8E" target="_blank">Moedict</a> the̍h--ê. Chit-má lāi-té ê sû sī chū <a href="http://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=439&content_sn=45" target="_blank">Kàu-io̍k-pō͘ Bân-lâm-gú thui-chiàn iōng-sû 700 jī</a> lāi-té soán 2 jī í-siōng ê sû lâi iōng, ē bān-bān-á koh ka sin ê sû. Múi chi̍t-ê sû ē liām 3 pái, tiong-kan ē keh 3 bió-cheng. Ūi-tio̍h thê-kióng hō͘ o̍h Tâi-bûn ê lâng liān-si̍p, mā ē-sái ōaⁿ hián-sī Kàu-io̍k-pō͘ ê Tâi-lô pheng-im (TL).</p>
+      <p class="tl">Tse sī tsi̍t-ê guá uī-tio̍h tsún-pī <a href="http://ctlt.twl.ncku.edu.tw/poj/index.html" target="_blank">Tâi-gí Pe̍h-ōe-jī Kiám-tīng</a> ê thiann-siá pōo-hūn chò ê liān-si̍p kang-kū. tsu-liāu lóng sī tùi <a href="https://www.moedict.tw/'%E7%99%BC%E7%A9%8E" target="_blank">Moedict</a> the̍h--ê. Tsit-má lāi-té ê sû sī tsū <a href="http://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=439&content_sn=45" target="_blank">Kàu-io̍k-pōo Bân-lâm-gú thui-tsiàn iōng-sû 700 jī</a> lāi-té suán 2 jī í-siōng ê sû lâi iōng, ē bān-bān-á koh ka sin ê sû. Múi chi̍t-ê sû ē liām 3 pái, tiong-kan ē keh 3 bió-tsing. Ūi-tio̍h thê-kióng hōo o̍h Tâi-bûn ê lâng liān-si̍p, mā ē-sái uānn hián-sī Kàu-io̍k-pōo ê Tâi-lô phing-im (TL).</p>
+      <p class="han">這是一个我為著準備 <a href="http://ctlt.twl.ncku.edu.tw/poj/index.html" target="_blank">台語白話字檢定</a> ê聽寫部份做ê練習工具。資料攏是對 <a href="https://www.moedict.tw/'%E7%99%BC%E7%A9%8E" target="_blank">Moedict</a> 提ê。這馬內底ê詞是自 <a href="http://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=439&content_sn=45" target="_blank">教育部閩南語推薦用詞700字</a> 內底選 2 字以上ê詞來用，會慢慢仔閣加新ê詞。。每一个詞會唸 3 擺，中間會隔 3 秒鐘。為著提供予學台文ê人練習，嘛會使換顯示教育部ê台羅拼音（TL）。</p>
+    </div> 
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js" integrity="sha512-ALoawPS0JxHQ+8dGL7htZIlVNRaE/SN9gHD4G8pJJTi9H4BQ/3PjdvhggSGR34g00mvTPFkxQuveQUsJA5664Q==" crossorigin="anonymous"></script>
+  <script src="./scripts/app-test.js"></script>
+</body>
+</html>
