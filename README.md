@@ -4,7 +4,7 @@ Che sī chi̍t-ê góa ūi-tio̍h chún-pī [Tâi-gí Pe̍h-ōe-jī Kiám-tēng]
 [https://miau715.github.io/POJTest/](https://miau715.github.io/POJTest/)
 
 Chu-liāu sī tùi [Moedict](https://www.moedict.tw/'%E7%99%BC%E7%A9%8E) kah [Kàu-io̍k-pō͘ Tâi-oân Tâi-gí siông-iōng-sû sû-tián](https://sutian.moe.edu.tw/zh-hant/) the̍h--ê. 
-Chit-má lāi-té ê sû sī chū [Kàu-io̍k-pō͘ Bân-lâm-gú thui-chiàn iōng-sû 700 jī](http://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=439&content_sn=45) lāi-té soán 2 jī í-siōng ê sû lâi iōng, ē bān-bān-á koh ka sin ê sû. Múi chi̍t-ê sû ē liām 3 pái, tiong-kan ē keh 3 bió-cheng. 
+Chit-má lāi-té ê sû chú-iàu sī chū [Kàu-io̍k-pō͘ Bân-lâm-gú thui-chiàn iōng-sû 700 jī](https://digimagic2022.url.tw/ntcmin700/pdf/pdf01.pdf) lāi-té soán 2 jī í-siōng ê sû lâi iōng. Múi chi̍t-ê sû ē liām 3 pái, tiong-kan ē keh 3 bió-cheng. 
 Ūi-tio̍h thê-kióng hō͘ o̍h Tâi-bûn ê lâng liān-si̍p, mā ē-sái ōaⁿ hián-sī Kàu-io̍k-pō͘ ê Tâi-lô pheng-im (TL).
 
 -------
@@ -15,5 +15,5 @@ Chit-má lāi-té ê sû sī chū [Kàu-io̍k-pō͘ Bân-lâm-gú thui-chiàn i�
 [https://miau715.github.io/POJTest/](https://miau715.github.io/POJTest/)
 
 資料是對 [Moedict](https://www.moedict.tw/'%E7%99%BC%E7%A9%8E) 佮 [教育部臺灣台語常用詞辭典](https://sutian.moe.edu.tw/zh-hant/ 提ê。
-這馬內底ê詞是自 [教育部閩南語推薦用詞700字](http://language.moe.gov.tw/result.aspx?classify_sn=23&subclassify_sn=439&content_sn=45) 內底選 2 字以上ê詞來用，會慢慢仔閣加新ê詞。每一个詞會唸 3 擺，中間會隔 3 秒鐘。
+這馬內底ê詞主要是自 [教育部閩南語推薦用詞700字](https://digimagic2022.url.tw/ntcmin700/pdf/pdf01.pdf) 內底選 2 字以上ê詞來用。每一个詞會唸 3 擺，中間會隔 3 秒鐘。
 為著提供予學台文ê人練習，嘛會使換顯示教育部ê台羅拼音（TL）。
