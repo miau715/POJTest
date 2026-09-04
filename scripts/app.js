@@ -1,9 +1,10 @@
 $.getJSON('./data/vocabulary.json', function(json) {
   const vObj = json;
   const vList = $('#vocabulary-list');
-  const vLength = vObj.vocabulary.length;
   const vNumber = 5;
-  const numArray = [...Array(vLength).keys()];
+  const numArray = vObj.vocabulary
+    .map((v, i) => i)
+    .filter((i) => vObj.vocabulary[i].audio);
   let audioArray = [];
   let isStop = false;
   let vAudio;
@@ -35,12 +36,12 @@ $.getJSON('./data/vocabulary.json', function(json) {
 
     randomIArray.forEach(function(number, i) {
       let getVocabulary = vObj.vocabulary[number]["v"];
+      audioArray[i] = vObj.vocabulary[number]["audio"];
       vList.append(`<li><div class="result-wrapper"><div class="result"><span class="han">${getVocabulary}</span></div><div class="link"><a href="https://www.moedict.tw/'${getVocabulary}" target="_blank"><span class="poj">Khòaⁿ jī-tián</span><span class="tl">Khuànn jī-tián</span><span class="han">看字典</span></a></div></div></li>`);
       $.ajax({
         url: `https://www.moedict.tw/t/${getVocabulary}.json`,
         dataType: 'json',
         success: function(result) {
-          let thisVObj = result;
           let thisVTTL = result.h[0].T;
           let thisVTTLProns = thisVTTL.split('/');
           let thisVTPOJOrigin = '';
@@ -101,11 +102,6 @@ $.getJSON('./data/vocabulary.json', function(json) {
           thisVTPOJOrigin.split(/([- \u2011\.,!?\/])/).forEach(function(seg){
             thisVTPOJ += tonePoj(seg);
           });
-          let thisVAudio = thisVObj.h[0]._;
-          if (Number(thisVAudio) < 20000 || Number(thisVAudio) > 50000) {
-            thisVAudio = (100000 + Number(thisVAudio)).toString().replace(/^1/, '');
-          }
-          audioArray[i] = thisVAudio;
           thisVTPOJ = thisVTPOJ.replace('/', '<span class="or">又</span>')
           thisVTTL = thisVTTL.replace('/', '<span class="or">又</span>')
           vList.find('li').eq(i).find('.result').prepend(`<span class="poj">${thisVTPOJ}</span><span class="tl">${thisVTTL}</span>`);
@@ -122,7 +118,7 @@ $.getJSON('./data/vocabulary.json', function(json) {
         }
         else {
           vAudio = new Howl({
-            src: [`https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.ogg`, `https://1763c5ee9859e0316ed6-db85b55a6a3fbe33f09b9245992383bd.ssl.cf1.rackcdn.com/${audioArray[currentAudioI]}.mp3`],
+            src: [`./audio/${audioArray[currentAudioI]}`],
             html5: true
           });
           let playTimes = 0;
