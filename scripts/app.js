@@ -105,9 +105,20 @@ $.getJSON('./data/vocabulary.json', function(json) {
           thisVTPOJ = thisVTPOJ.replace('/', '<span class="or">又</span>')
           thisVTTL = thisVTTL.replace('/', '<span class="or">又</span>')
           vList.find('li').eq(i).find('.result').prepend(`<span class="poj">${thisVTPOJ}</span><span class="tl">${thisVTTL}</span>`);
+          applyLangSwitchInDisplay();
         }
       });
     });
+
+    function applyLangSwitchInDisplay() {
+      if ($('input[name=use-poj]:checked').attr('id') === 'use-tl') {
+        $('.poj').addClass('hide');
+        $('.tl').addClass('show');
+      } else {
+        $('.poj').removeClass('hide');
+        $('.tl').removeClass('show');
+      }
+    }
   
     function playAudio(currentAudioI) {
       function checkFile() {
